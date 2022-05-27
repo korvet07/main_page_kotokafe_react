@@ -1,6 +1,6 @@
 .star-card {
   width: 353px;
-  min-height: 525px;
+  min-height: 100%;
   padding: 20px;
   border-radius: 12px;
   background-color: #ffffff;

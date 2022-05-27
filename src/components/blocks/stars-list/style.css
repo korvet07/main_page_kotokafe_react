@@ -1,10 +1,7 @@
 .star-list {
   position: relative;
   display: flex;
-  padding-right: 90px;
-  padding-left: 09px;
-  padding-top: 100px;
-  padding-bottom: 80px;
+	padding: 100px 90px 80px;
   background-color: #ffeead;
   background-position: left bottom;
   background-size: 449px 304px;
@@ -41,6 +38,9 @@
 }
 
 .star-list__list {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
   margin: 0;
   padding: 0;
   margin-top: 44px;
