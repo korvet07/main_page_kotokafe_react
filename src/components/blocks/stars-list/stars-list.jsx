@@ -7,7 +7,7 @@ import "./style.css";
 function StarsList({ stars }) {
   return (
     <section className="star-list">
-      {stars.length ? (
+      {Array.isArray(stars) && stars.length ? (
         <>
           <Title level={2}>Наши звёзды</Title>
           <ul className="star-list__list">
