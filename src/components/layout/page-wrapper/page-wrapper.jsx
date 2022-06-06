@@ -1,17 +1,17 @@
 import React from "react";
-import Header from "../../layout/header/header";
-import Footer from "../../layout/footer/footer";
+import Header from "../header/header";
+import Footer from "../footer/footer";
 import MainPage from "../../pages/main-page/main-page";
-import "./style.css";
+import { Main } from "./styles";
 
 // Обёртка для контента страниц
-function PageWrapper({ ...prop }) {
+function PageWrapper({ children, ...prop }) {
   return (
     <>
       <Header />
-      <main className="page-wrapper__main">
+      <Main>
         <MainPage {...prop} />
-      </main>
+      </Main>
       <Footer />
     </>
   );

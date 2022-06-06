@@ -1,8 +1,13 @@
 import React from "react";
 import PageWrapper from "../layout/page-wrapper/page-wrapper"
-import "./style.css";
+import { GlobalStyle } from "./styles";
 import starList from "../../mocks/starList";
 
 export default function App() {
-	return <PageWrapper stars={starList} />;
+	return (
+	<>
+		<GlobalStyle />
+		<PageWrapper stars={starList} />
+	</>
+	);
 }

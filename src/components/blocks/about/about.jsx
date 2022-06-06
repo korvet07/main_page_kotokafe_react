@@ -1,23 +1,24 @@
 import React from "react";
 import Title, { TitleSize } from "../../ui/title/title";
-import "./style.css";
+import { Address, Text, StyledSection, WorkTime, TextWrapper } from "./styles";
 
-function About() {
+// Раздел о котокафе
+function About({ level }) {
   return (
-    <section className="about">
-      <div className="about__wrapper">
-        <Title level={1} size={TitleSize.BIG}>Первое в России котокафе</Title>
-        <p className="about__text">
+    <StyledSection>
+      <TextWrapper>
+        <Title level={level} size={TitleSize.BIG}>
+          Первое в России котокафе
+        </Title>
+        <Text>
           Крупнейшее котокафе России, в котором живёт 50 кошек и котов, и каждый
           из них ищет новый дом. Животных можно гладить, фотографировать, играть
           с ними.
-        </p>
-        <p className="about__work-time">Рабочее время с 8:00 до 23:00</p>
-        <p className="about__address">
-          Санкт-Петербург, набережная реки Карповки, дом 5, литера П
-        </p>
-      </div>
-    </section>
+        </Text>
+        <WorkTime>Рабочее время с 8:00 до 23:00</WorkTime>
+        <Address>Санкт-Петербург, Большая Конюшенная улица, 27</Address>
+      </TextWrapper>
+    </StyledSection>
   );
 }
 

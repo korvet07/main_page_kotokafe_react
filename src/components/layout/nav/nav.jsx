@@ -1,10 +1,10 @@
 import React from "react";
 import Button from "../../ui/button/button";
 
-function Nav() {
+function Nav({pageUrl}) {
   return (
     <nav>
-      <Button>Купить билет</Button>
+			<Button minWidth={260} link={pageUrl}>Купить билет</Button>
     </nav>
   );
 }

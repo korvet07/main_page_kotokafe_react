@@ -1,26 +1,32 @@
 import React from "react";
+import Button from "../../ui/button/button";
 import Title from "../../ui/title/title";
 import StarCard from "../../ui/star-card/star-card";
-import Button from "../../ui/button/button";
-import "./style.css";
+import { StarItem, StarList, StyledStarsList } from "./styles";
 
-function StarsList({ stars }) {
+// список известных котов
+function StarsList({
+  stars, // коты
+  level // уровень заголовка списка.
+}) {
   return (
-    <section className="star-list">
-      {Array.isArray(stars) && stars.length ? (
+    <StyledStarsList>
+      {stars?.length ? (
         <>
-          <Title level={2}>Наши звёзды</Title>
-          <ul className="star-list__list">
+          <Title level={level}>Наши звёзды</Title>
+          <StarList $isGridList>
             {stars.map((star) => (
-              <li className="star-list__item" key={star.id}>
+              <StarItem key={star.id}>
                 <StarCard {...star} />
-              </li>
+              </StarItem>
             ))}
-          </ul>
-          <Button minWidth={353}>Купить билет</Button>
+          </StarList>
         </>
       ) : null}
-    </section>
+      <Button minWidth={353} link="/buy">
+        Купить билет
+      </Button>
+    </StyledStarsList>
   );
 }
 
